@@ -1,0 +1,64 @@
+body {
+  background: #c9c5c5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.rating-card {
+  width: 300px;
+  height: auto;
+  background: #fff;
+  padding: 24px;
+  text-align: center;
+}
+
+.rating-card h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.rating-card p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #767676;
+  margin-bottom: 24px;
+}
+
+.rating-card .rating-wrapper {
+  margin: 24px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-card .rating-wrapper svg {
+  align-self: center;
+  cursor: pointer;
+}
+
+.rating-card .star {
+  fill: #808080;
+  transition: fill 0.2s ease;
+}
+
+.rating-card svg:hover .star {
+  fill: #ffb400;
+}
+
+.rating-card svg:hover ~ svg .star {
+    fill: #ffb400;
+}
+
+.rating-card svg[data-clicked] .star {
+    fill: #ffb400;
+}
+
+
+.rating-card svg[data-clicked]  ~ svg .star {
+    fill: #ffb400;
+}
